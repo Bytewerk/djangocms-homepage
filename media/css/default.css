@@ -1,0 +1,391 @@
+html,body{
+	margin:0;
+	padding:0;
+	height:100%;
+	border:none;
+}
+
+body {
+	font-family:Verdana,sans-serif;
+	background-color:white;
+	font-size:13px;
+}
+
+td,th {
+	vertical-align:top;
+	padding:0;
+}
+
+img       { border:0; }
+img.right { float:right; }
+img.left  { float:left; }
+
+input {
+	font-size:14px;
+	border: 1px solid #a6b7bb;
+	background-color:#FEfefe;
+}
+
+input.button {
+	background-color:#CCC;
+}
+
+a {
+	text-decoration:none;
+	color:#000;
+}
+
+ul {
+	padding-left:40px;
+	list-style-type:disc;
+}
+
+#content li {
+	padding-top:5px;
+}
+
+
+#shadow {
+	background-image:url(/media/images/shadow.png);
+	background-repeat:repeat-y;
+	min-height:100%;
+	width:1000px;
+	margin:0 auto;
+}
+
+#main {
+	margin:0 10px 0 10px;
+	height:100%;
+	padding-bottom:2px;
+}
+
+#header {
+	position:relative;
+	background-image:url(/media/images/header_bg.png);
+	background-repeat:repeat-y;
+  height:152px;
+}
+
+#header h1 {
+	color:#FFF;
+	font-weight:normal;
+	text-align:left;
+	padding:60px 10px 25px 15px;
+	margin:0;
+	font-size:38px;
+}
+
+#header #logo {
+  display:block;
+	position:absolute; 
+	top:15px; 
+	right:13px; 
+	height:92px;
+	width:210px;	   
+	background-image:url(/media/images/bingo_logo_210.png);
+	background-repeat:no-repeat;
+}
+
+#header input.text {
+  background-color:white;
+  color:#888;
+  border:1px solid #a6b7bb;
+  background-repeat:no-repeat;
+  width:120px;
+  height:18px;
+}
+
+#sitesearch {
+  display:none;
+  position:absolute;
+  right:0; bottom:0;
+  text-align:center;
+  background-image:url(/media/images/35_percent_white.png);
+  padding:3px 10px 3px 10px;
+  width:200px;
+	-moz-border-radius-topleft:12px;
+	-webkit-border-top-left-radius:12px;
+}
+
+#sitesearch_text {
+	background-image:url(/media/images/lupe.png);
+	background-position:6px 2px; 
+	padding-left:25px;
+  width:130px;
+  margin-right:3px;
+}
+
+#header input.submit {
+  border:1px solid #a6b7bb;
+	background-image:url(/media/images/go.png);
+	background-repeat:no-repeat;
+	background-position:center; 
+	width:23px;
+	height:20px;
+	position:relative;
+	top:1px;
+}
+
+#login_form {
+  position:absolute;
+  left:0; top:0;
+  background-image:url(/media/images/25_percent_white.png);
+	-moz-border-radius-bottomright:12px;
+	-webkit-border-bottom-right-radius:12px;
+  padding:1px 25px 4px 10px;
+}
+
+#external_links {
+	margin: 0;
+	display:block;
+	padding:0;
+}
+
+#external_links li {
+  display:block;
+  float:right;
+  width:99px;
+  text-align:center;
+  font-size:13px;
+  background-image:url(/media/images/35_percent_white.png);
+  margin-left:1px;
+  padding:2px 0 3px 0;
+}
+
+#external_links li:first-child {
+  margin-left:none;
+}
+
+#mainnav ul {
+	padding:0;
+	margin:0;
+	font-size:14px;
+	height:20px;
+	border-bottom:1px solid white;
+	position:relative;
+}
+
+#mainnav li {
+	position:relative;
+	display:block;
+	float:left;
+	height:20px;
+	background-image:url(/media/images/35_percent_white.png);
+	margin-right:2px;
+	-moz-border-radius-topright:8px;
+	-webkit-border-top-right-radius:8px;
+}
+
+#mainnav li.r {
+	float:right;
+}
+
+#mainnav li a {
+	padding:0 14px 2px;
+}
+
+#mainnav li.selected a, #mainnav li.ancestor a {
+	background-color:#FFF;
+	-moz-border-radius-topright:8px;
+	-webkit-border-top-right-radius:8px;
+}
+
+#mainnav li a:hover {
+	background-image:url(/media/images/50_percent_white.png);
+	-moz-border-radius-topright:8px;
+	-webkit-border-top-right-radius:8px;
+}
+
+#content #subnav a {
+	color:black;
+}
+
+#subnav ul {
+	margin:0 10px 0 0;
+	font-size:13px;
+	border-bottom:1px solid #e3e8e9;
+	line-height:22px;
+	padding:0;
+	width:670px;
+}
+
+#subnav ul ul {
+	width:auto;
+}
+
+#subnav li {
+	display:inline;
+	position:relative;
+}
+
+#subnav li a {
+	padding:3px 15px;
+	background-repeat:repeat-x;
+	background-position:bottom;
+}
+
+#subnav>ul>li.selected>a, #subnav>ul>li.ancestor>a {
+	background-image:url(/media/images/subnav_active_bg.png);
+}
+
+#subnav>ul>li>a:hover {
+	background-image:url(/media/images/subnav_hover_bg.png);
+}
+
+#subnav ul ul {
+	display:none;
+	position:absolute;
+	left:0; top:24px;
+	background-color:white;
+	border-style:solid;
+	border-color:#e3e8e9;
+	border-width:1px 1px 1px 1px;
+	min-width:150px;
+	padding:0;
+	z-index:100;
+}
+
+#subnav ul li:hover ul {
+	display:block;
+}
+
+#subnav ul ul>li {
+	text-align:left;
+	display:block;
+	padding:0;
+  white-space:nowrap;
+}
+
+#subnav>ul>li:hover>a {
+	text-decoration:none;
+}
+
+
+#subnav>ul>li>ul>li:hover {
+	background-color:#FAFAFA;
+}
+
+#subnav>ul>li>ul>li:hover>a {
+	text-decoration:underline;
+}
+
+#subnav>ul>li>ul>li.selected {
+  background-color:#F0F0F0;
+}
+
+#subnav>ul>li>ul>li.selected>a {
+	color:#006;
+}
+
+#breadcrumbs {
+  padding-left:15px;
+  font-style:italic;
+  width:640px;
+}
+
+#content #breadcrumbs, #content #breadcrumbs a {
+  color:#AAA;
+}
+
+#breadcrumbs a:hover {
+  text-decoration:underline;
+}
+
+#content {
+	float:left;
+}
+
+#bottomnav {
+  margin:0 10px;
+  padding:0;
+  display:block;
+  text-align:center;
+  width:630px;
+  list-style-type:none;
+  border-top:1px solid #E3E8E9;
+}
+
+#bottomnav li {
+  display:inline;
+  padding:0 10px;
+}
+
+#bottomnav li a {
+  color:#444;
+}
+
+#bottomnav li a:hover {
+  text-decoration:underline;
+}
+
+div.box {
+	margin:20px 10px 20px 690px;
+	font-size:13px;
+	border: 1px solid #a6b7bb;
+}
+
+
+div.box h1 {
+	background-color:#bfc9ca;
+	font-size:14px;
+	font-weight:normal;
+	padding:2px 6px;
+	margin:0;
+}
+
+
+div.box div.odd, div.box tr.odd {
+	background-color:#ebecef;
+}
+
+div.box div.even, div.box tr.even {
+	background-color:#e1e2e7;
+}
+
+div.box table {
+	width:100%;
+}
+* html div.box table {
+	width:275px;
+}
+
+div.box table td {
+	padding:1px 3px;
+}
+
+div.schedule {
+	margin-top:45px;
+}
+
+div.login form {
+	padding: 10px 10px 15px 10px;
+}
+
+div.login form input {
+	width:170px;
+}
+
+div.login form input.button {
+	margin-top:10px;
+}
+
+div.schedule td.date {
+	text-align:right;
+	width:45px;
+}
+
+div.schedule div.subtitle {
+	font-size:10px;
+}
+
+div.forum div {
+  padding:3px 10px;
+}
+
+div.forum a:hover {
+  text-decoration:underline;
+}
+
+div.bytewerk {
+	font-size:12px;
+}

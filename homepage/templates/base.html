@@ -1,0 +1,90 @@
+{% load cms_tags menu_tags sekizai_tags %}
+<!doctype html>
+<html>
+    <head>
+        <title>bingo e.V. - {% block title %}Bürgernetz Ingolstadt{% endblock title %}</title>
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <link rel="stylesheet" type="text/css" href="/media/css/reset.css">
+        <link rel="stylesheet" type="text/css" href="/media/css/default.css">
+        <link rel="stylesheet" type="text/css" href="/media/css/content.css">
+        <link rel="stylesheet" type="text/css" href="/media/css/gallery.css">
+        <link rel="shortcut icon" href="/media/images/favicon.ico" type="image/vnd.microsoft.icon">
+        <link rel="icon" href="/media/images/favicon.ico" type="image/vnd.microsoft.icon">
+        {% render_block "css" %}
+    </head>
+    <body>
+        {% cms_toolbar %}
+        <div id="shadow">
+         <div id="main">
+
+          <div id="header">
+           <a href="/" id="logo"></a>
+           <h1>Bürgernetz Ingolstadt</h1>
+
+           <div id="mainnav">
+            <ul>
+             {% show_menu 0 0 %}
+            </ul>
+           </div>
+
+           <form id="login_form" action="https://www.bingo-ev.de/roundcube/" method="POST">
+            <span style="font-size:13px;color:#333">Webmail-Login: </span>
+            <input type="hidden" name="_action" value="login" />
+            <input class="text" id="login_username" name="_user" value="" placeholder="Benutzername">
+            <input class="text" id="login_password" name="_pass" type="password" value="" placeholder="Passwort">
+            <input class="submit" id="login_submit" type="submit" value="">
+           </form>
+
+           <form id="sitesearch" action="/search" method="GET">
+            <input class="text" id="sitesearch_text" name="q" value="bingo-Suche..."><input class="submit" id="sitesearch_submit" type="submit" value="">
+           </form>
+          </div>
+
+          <div id="content">
+           <div id="subnav">
+            <ul>
+             {% show_menu 1 %}
+            </ul>
+            {% if request.current_page.parent.parent %}
+            <div id="breadcrumbs">
+              Sie befinden sich hier:
+               {% show_breadcrumb 1 "breadcrumb.html" %}
+            </div>
+            {% endif %}
+           </div>
+
+      <!-- content area -->
+           {% if request.current_page.level > 0 %}Menu level >0{% endif %}
+
+      {% block content %}{% endblock content %}
+
+      <!-- end content area -->
+           <div style="clear:both"></div>
+          </div>
+
+      <!-- right column -->
+          <ul id="external_links">
+           <li class="r"><a href="http://www.bingo-ev.de/cgi-bin/ub/htmforum?path=ngin&fun=start">Bürgerforum</a></li>
+           <li class="r"><a href="http://portal.bingo-ev.de/" target="_blank">IN-Portal</a></li>
+           <li class="r"><a href="http://www.bytewerk.org/" target="_blank">bytewerk</a></li>
+          </ul>
+
+          {#% include "sidebar/termine.html" %#}
+          {#% include "sidebar/service.html" %#}
+          {#% include "sidebar/bytewerk.html" %#}
+
+      <!-- end right column -->
+
+          <div style="clear:both"></div>
+          <ul id="bottomnav">
+           <li><a href="/">Home</a></li>
+           <li><a href="/kontakt/">Kontakt</a></li>
+           <li><a href="/kontakt/impressum/">Impressum</a></li>
+          </ul>
+         </div>
+        </div>
+
+      	<script type="text/javascript" src="/media/js/jquery-3.1.1.slim.min.js"></script>
+        {% render_block "js" %}
+    </body>
+</html>

@@ -1,0 +1,4 @@
+.idea
+project.db
+__pycache__
+settings_secret.py
